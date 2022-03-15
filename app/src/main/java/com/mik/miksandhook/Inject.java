@@ -147,7 +147,7 @@ public class Inject implements IMikDex {
             }
         });
         ClassLoader classLoader= getClassloader();
-        MikXpHelpers.findHkMethod("com.mik.injectsandhookdemo.MainActivity",classLoader , "ceshi", new MIK_MethodHk() {
+        MikXpHelpers.findHkMethod("com.mik.injectdemo.MainActivity",classLoader , "ceshi", new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);

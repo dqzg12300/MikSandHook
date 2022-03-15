@@ -26,17 +26,19 @@
 
 ### 视频演示
 
-todo，近期会补上。
+[MikRom的dex注入Sandhook来实现免root下的xposed](https://www.bilibili.com/video/BV1k34y1t7Q3/)
 
-### 
+### 相关项目
+
+[MikRom](https://github.com/dqzg12300/MikRom)
+
+[MikManager](https://github.com/dqzg12300/MikManager)
 
 ### 完结撒花
 
 我只做了简单的替换，如果有大佬把基本特征全部去掉了。可以发给我来替换内置的libsandhook.so。
 
 到这里MikRom的配套功能大致完成。完结撒花。
-
-
 
 ### 重要提示
 
