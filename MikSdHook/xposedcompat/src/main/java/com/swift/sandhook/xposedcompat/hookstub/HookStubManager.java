@@ -15,9 +15,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.MIK_MethodHk;
 import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
+import de.robv.android.xposed.MikXpHelpers;
 
 public class HookStubManager {
 
@@ -42,8 +42,8 @@ public class HookStubManager {
     static {
         is64Bit = SandHook.is64Bit();
         Class stubClass = is64Bit ? MethodHookerStubs64.class : MethodHookerStubs32.class;
-        stubSizes = (int[]) XposedHelpers.getStaticObjectField(stubClass, "stubSizes");
-        Boolean hasBackup = (Boolean) XposedHelpers.getStaticObjectField(stubClass, "hasStubBackup");
+        stubSizes = (int[]) MikXpHelpers.getStaticObjectField(stubClass, "stubSizes");
+        Boolean hasBackup = (Boolean) MikXpHelpers.getStaticObjectField(stubClass, "hasStubBackup");
         hasStubBackup = hasBackup != null && (hasBackup && !XposedCompat.useNewCallBackup);
         if (stubSizes != null && stubSizes.length > 0) {
             MAX_STUB_ARGS = stubSizes.length - 1;
@@ -264,7 +264,7 @@ public class HookStubManager {
             }
         }
 
-        XC_MethodHook.MethodHookParam param = new XC_MethodHook.MethodHookParam();
+        MIK_MethodHk.MethodHookParam param = new MIK_MethodHk.MethodHookParam();
 
         param.method = originMethod;
         param.thisObject = thiz;
@@ -273,7 +273,7 @@ public class HookStubManager {
         int beforeIdx = 0;
         do {
             try {
-                ((XC_MethodHook) snapshot[beforeIdx]).callBeforeHookedMethod(param);
+                ((MIK_MethodHk) snapshot[beforeIdx]).callBeforeHookedMethod(param);
             } catch (Throwable t) {
                 // reset result (ignoring what the unexpectedly exiting callback did)
                 param.setResult(null);
@@ -311,7 +311,7 @@ public class HookStubManager {
             Throwable lastThrowable = param.getThrowable();
 
             try {
-                ((XC_MethodHook) snapshot[afterIdx]).callAfterHookedMethod(param);
+                ((MIK_MethodHk) snapshot[afterIdx]).callAfterHookedMethod(param);
             } catch (Throwable t) {
                 XposedBridge.log(t);
                 if (lastThrowable == null)
@@ -342,7 +342,7 @@ public class HookStubManager {
             return SandHook.callOriginMethod(origin, backup, thiz, args);
         }
 
-        XC_MethodHook.MethodHookParam param = new XC_MethodHook.MethodHookParam();
+        MIK_MethodHk.MethodHookParam param = new MIK_MethodHk.MethodHookParam();
 
         param.method = origin;
         param.thisObject = thiz;
@@ -351,7 +351,7 @@ public class HookStubManager {
         int beforeIdx = 0;
         do {
             try {
-                ((XC_MethodHook) snapshot[beforeIdx]).callBeforeHookedMethod(param);
+                ((MIK_MethodHk) snapshot[beforeIdx]).callBeforeHookedMethod(param);
             } catch (Throwable t) {
                 // reset result (ignoring what the unexpectedly exiting callback did)
                 param.setResult(null);
@@ -383,7 +383,7 @@ public class HookStubManager {
             Throwable lastThrowable = param.getThrowable();
 
             try {
-                ((XC_MethodHook) snapshot[afterIdx]).callAfterHookedMethod(param);
+                ((MIK_MethodHk) snapshot[afterIdx]).callAfterHookedMethod(param);
             } catch (Throwable t) {
                 XposedBridge.log(t);
                 if (lastThrowable == null)

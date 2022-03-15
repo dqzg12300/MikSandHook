@@ -36,8 +36,8 @@ import external.org.apache.commons.lang3.reflect.MemberUtils;
 /**
  * Helpers that simplify hooking and calling methods/constructors, getting and settings fields, ...
  */
-public final class XposedHelpers {
-	private XposedHelpers() {}
+public final class MikXpHelpers {
+	private MikXpHelpers() {}
 
 	private static final HashMap<String, Field> fieldCache = new HashMap<>();
 	private static final HashMap<String, Method> methodCache = new HashMap<>();
@@ -174,14 +174,14 @@ public final class XposedHelpers {
 	}
 
 	/**
-	 * Look up a method and hook it. See {@link #findAndHookMethod(String, ClassLoader, String, Object...)}
+	 * Look up a method and hook it. See {@link #findHkMethod(String, ClassLoader, String, Object...)}
 	 * for details.
 	 */
-	public static XC_MethodHook.Unhook findAndHookMethod(Class<?> clazz, String methodName, Object... parameterTypesAndCallback) {
-		if (parameterTypesAndCallback.length == 0 || !(parameterTypesAndCallback[parameterTypesAndCallback.length-1] instanceof XC_MethodHook))
+	public static MIK_MethodHk.Unhook findHkMethod(Class<?> clazz, String methodName, Object... parameterTypesAndCallback) {
+		if (parameterTypesAndCallback.length == 0 || !(parameterTypesAndCallback[parameterTypesAndCallback.length-1] instanceof MIK_MethodHk))
 			throw new IllegalArgumentException("no callback defined");
 
-		XC_MethodHook callback = (XC_MethodHook) parameterTypesAndCallback[parameterTypesAndCallback.length-1];
+		MIK_MethodHk callback = (MIK_MethodHk) parameterTypesAndCallback[parameterTypesAndCallback.length-1];
 		Method m = findMethodExact(clazz, methodName, getParameterClasses(clazz.getClassLoader(), parameterTypesAndCallback));
 
 		return XposedBridge.hookMethod(m, callback);
@@ -218,7 +218,7 @@ public final class XposedHelpers {
 	 *
 	 * <p>As last argument to this method (after the list of target method parameters), you need
 	 * to specify the callback that should be executed when the method is invoked. It's usually
-	 * an anonymous subclass of {@link XC_MethodHook} or {@link XC_MethodReplacement}.
+	 * an anonymous subclass of {@link MIK_MethodHk} or {@link XC_MethodReplacement}.
 	 *
 	 * <p><b>Example</b>
 	 * <pre class="prettyprint">
@@ -231,7 +231,7 @@ public final class XposedHelpers {
 	 * }
 	 *
 	 * // ... you can use this call:
-	 * findAndHookMethod("com.example.SomeClass", lpparam.classLoader, String.class, int.class, "com.example.MyClass", new XC_MethodHook() {
+	 * findHkMethod("com.example.SomeClass", lpparam.classLoader, String.class, int.class, "com.example.MyClass", new MIK_MethodHk() {
 	 *   &#64;Override
 	 *   protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
 	 *     String oldText = (String) param.args[0];
@@ -256,8 +256,8 @@ public final class XposedHelpers {
 	 * @throws ClassNotFoundError In case the target class or one of the parameter types couldn't be resolved.
 	 * @return An object which can be used to remove the callback again.
 	 */
-	public static XC_MethodHook.Unhook findAndHookMethod(String className, ClassLoader classLoader, String methodName, Object... parameterTypesAndCallback) {
-		return findAndHookMethod(findClass(className, classLoader), methodName, parameterTypesAndCallback);
+	public static MIK_MethodHk.Unhook findHkMethod(String className, ClassLoader classLoader, String methodName, Object... parameterTypesAndCallback) {
+		return findHkMethod(findClass(className, classLoader), methodName, parameterTypesAndCallback);
 	}
 
 	/**
@@ -284,7 +284,7 @@ public final class XposedHelpers {
 	 * Look up a method in a class and set it to accessible.
 	 * The method must be declared or overridden in the given class.
 	 *
-	 * <p>See {@link #findAndHookMethod(String, ClassLoader, String, Object...)} for details about
+	 * <p>See {@link #findHkMethod(String, ClassLoader, String, Object...)} for details about
 	 * the method and parameter type resolution.
 	 *
 	 * @param className The name of the class which implements the method.
@@ -498,7 +498,7 @@ public final class XposedHelpers {
 				throw new ClassNotFoundError("parameter type must not be null", null);
 
 			// ignore trailing callback
-			if (type instanceof XC_MethodHook)
+			if (type instanceof MIK_MethodHk)
 				continue;
 
 			if (parameterClasses == null)
@@ -610,24 +610,24 @@ public final class XposedHelpers {
 	}
 
 	/**
-	 * Look up a constructor and hook it. See {@link #findAndHookMethod(String, ClassLoader, String, Object...)}
+	 * Look up a constructor and hook it. See {@link #findHkMethod(String, ClassLoader, String, Object...)}
 	 * for details.
 	 */
-	public static XC_MethodHook.Unhook findAndHookConstructor(Class<?> clazz, Object... parameterTypesAndCallback) {
-		if (parameterTypesAndCallback.length == 0 || !(parameterTypesAndCallback[parameterTypesAndCallback.length-1] instanceof XC_MethodHook))
+	public static MIK_MethodHk.Unhook findAndHookConstructor(Class<?> clazz, Object... parameterTypesAndCallback) {
+		if (parameterTypesAndCallback.length == 0 || !(parameterTypesAndCallback[parameterTypesAndCallback.length-1] instanceof MIK_MethodHk))
 			throw new IllegalArgumentException("no callback defined");
 
-		XC_MethodHook callback = (XC_MethodHook) parameterTypesAndCallback[parameterTypesAndCallback.length-1];
+		MIK_MethodHk callback = (MIK_MethodHk) parameterTypesAndCallback[parameterTypesAndCallback.length-1];
 		Constructor<?> m = findConstructorExact(clazz, getParameterClasses(clazz.getClassLoader(), parameterTypesAndCallback));
 
 		return XposedBridge.hookMethod(m, callback);
 	}
 
 	/**
-	 * Look up a constructor and hook it. See {@link #findAndHookMethod(String, ClassLoader, String, Object...)}
+	 * Look up a constructor and hook it. See {@link #findHkMethod(String, ClassLoader, String, Object...)}
 	 * for details.
 	 */
-	public static XC_MethodHook.Unhook findAndHookConstructor(String className, ClassLoader classLoader, Object... parameterTypesAndCallback) {
+	public static MIK_MethodHk.Unhook findAndHookConstructor(String className, ClassLoader classLoader, Object... parameterTypesAndCallback) {
 		return findAndHookConstructor(findClass(className, classLoader), parameterTypesAndCallback);
 	}
 

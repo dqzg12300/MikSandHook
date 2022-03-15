@@ -14,7 +14,7 @@ import java.util.zip.ZipFile;
 import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 
-import static de.robv.android.xposed.XposedHelpers.closeSilently;
+import static de.robv.android.xposed.MikXpHelpers.closeSilently;
 
 public final class XposedInit {
     private static final String TAG = XposedBridge.TAG;

@@ -13,8 +13,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import cn.mik.IMikDex;
-import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XposedHelpers;
+import de.robv.android.xposed.MIK_MethodHk;
+import de.robv.android.xposed.MikXpHelpers;
 
 
 public class Inject implements IMikDex {
@@ -138,7 +138,7 @@ public class Inject implements IMikDex {
         SandHookConfig.libSandHookPath=path;
         Log.e("mikrom","Inject 1");
 
-        XposedHelpers.findAndHookMethod(String.class, "toString", new XC_MethodHook() {
+        MikXpHelpers.findHkMethod(String.class, "toString", new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);
@@ -147,7 +147,7 @@ public class Inject implements IMikDex {
             }
         });
         ClassLoader classLoader= getClassloader();
-        XposedHelpers.findAndHookMethod("com.mik.injectsandhookdemo.MainActivity",classLoader , "ceshi", new XC_MethodHook() {
+        MikXpHelpers.findHkMethod("com.mik.injectsandhookdemo.MainActivity",classLoader , "ceshi", new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);

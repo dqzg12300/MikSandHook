@@ -59,7 +59,7 @@ public final class XposedBridge {
 	private static final Object[] EMPTY_ARRAY = new Object[0];
 
 	// built-in handlers
-	public static final Map<Member, CopyOnWriteSortedSet<XC_MethodHook>> sHookedMethodCallbacks = new HashMap<>();
+	public static final Map<Member, CopyOnWriteSortedSet<MIK_MethodHk>> sHookedMethodCallbacks = new HashMap<>();
 	public static final CopyOnWriteSortedSet<XC_LoadPackage> sLoadedPackageCallbacks = new CopyOnWriteSortedSet<>();
 	/*package*/ static final CopyOnWriteSortedSet<XC_InitPackageResources> sInitPackageResourcesCallbacks = new CopyOnWriteSortedSet<>();
 
@@ -124,14 +124,14 @@ public final class XposedBridge {
 	 * @param callback The callback to be executed when the hooked method is called.
 	 * @return An object that can be used to remove the hook.
 	 *
-	 * @see XposedHelpers#findAndHookMethod(String, ClassLoader, String, Object...)
-	 * @see XposedHelpers#findAndHookMethod(Class, String, Object...)
+	 * @see MikXpHelpers#findHkMethod(String, ClassLoader, String, Object...)
+	 * @see MikXpHelpers#findHkMethod(Class, String, Object...)
 	 * @see #hookAllMethods
-	 * @see XposedHelpers#findAndHookConstructor(String, ClassLoader, Object...)
-	 * @see XposedHelpers#findAndHookConstructor(Class, Object...)
+	 * @see MikXpHelpers#findAndHookConstructor(String, ClassLoader, Object...)
+	 * @see MikXpHelpers#findAndHookConstructor(Class, Object...)
 	 * @see #hookAllConstructors
 	 */
-	public static XC_MethodHook.Unhook hookMethod(Member hookMethod, XC_MethodHook callback) {
+	public static MIK_MethodHk.Unhook hookMethod(Member hookMethod, MIK_MethodHk callback) {
 		if (!(hookMethod instanceof Method) && !(hookMethod instanceof Constructor<?>)) {
 			throw new IllegalArgumentException("Only methods and constructors can be hooked: " + hookMethod.toString());
 		} else if (hookMethod.getDeclaringClass().isInterface()) {
@@ -145,7 +145,7 @@ public final class XposedBridge {
 		}
 
 		boolean newMethod = false;
-		CopyOnWriteSortedSet<XC_MethodHook> callbacks;
+		CopyOnWriteSortedSet<MIK_MethodHk> callbacks;
 		synchronized (sHookedMethodCallbacks) {
 			callbacks = sHookedMethodCallbacks.get(hookMethod);
 			if (callbacks == null) {
@@ -181,15 +181,15 @@ public final class XposedBridge {
 	/**
 	 * Removes the callback for a hooked method/constructor.
 	 *
-	 * @deprecated Use {@link XC_MethodHook.Unhook#unhook} instead. An instance of the {@code Unhook}
+	 * @deprecated Use {@link MIK_MethodHk.Unhook#unhook} instead. An instance of the {@code Unhook}
 	 * class is returned when you hook the method.
 	 *
 	 * @param hookMethod The method for which the callback should be removed.
 	 * @param callback The reference to the callback as specified in {@link #hookMethod}.
 	 */
 	@Deprecated
-	public static void unhookMethod(Member hookMethod, XC_MethodHook callback) {
-		CopyOnWriteSortedSet<XC_MethodHook> callbacks;
+	public static void unhookMethod(Member hookMethod, MIK_MethodHk callback) {
+		CopyOnWriteSortedSet<MIK_MethodHk> callbacks;
 		synchronized (sHookedMethodCallbacks) {
 			callbacks = sHookedMethodCallbacks.get(hookMethod);
 			if (callbacks == null)
@@ -209,8 +209,8 @@ public final class XposedBridge {
 	 * @return A set containing one object for each found method which can be used to unhook it.
 	 */
 	@SuppressWarnings("UnusedReturnValue")
-	public static Set<XC_MethodHook.Unhook> hookAllMethods(Class<?> hookClass, String methodName, XC_MethodHook callback) {
-		Set<XC_MethodHook.Unhook> unhooks = new HashSet<>();
+	public static Set<MIK_MethodHk.Unhook> hookAllMethods(Class<?> hookClass, String methodName, MIK_MethodHk callback) {
+		Set<MIK_MethodHk.Unhook> unhooks = new HashSet<>();
 		for (Member method : hookClass.getDeclaredMethods())
 			if (method.getName().equals(methodName))
 				unhooks.add(hookMethod(method, callback));
@@ -225,8 +225,8 @@ public final class XposedBridge {
 	 * @return A set containing one object for each found constructor which can be used to unhook it.
 	 */
 	@SuppressWarnings("UnusedReturnValue")
-	public static Set<XC_MethodHook.Unhook> hookAllConstructors(Class<?> hookClass, XC_MethodHook callback) {
-		Set<XC_MethodHook.Unhook> unhooks = new HashSet<>();
+	public static Set<MIK_MethodHk.Unhook> hookAllConstructors(Class<?> hookClass, MIK_MethodHk callback) {
+		Set<MIK_MethodHk.Unhook> unhooks = new HashSet<>();
 		for (Member constructor : hookClass.getDeclaredConstructors())
 			unhooks.add(hookMethod(constructor, callback));
 		return unhooks;
@@ -297,7 +297,7 @@ public final class XposedBridge {
 	 * <p class="caution">There are very few cases where this method is needed. A common mistake is
 	 * to replace a method and then invoke the original one based on dynamic conditions. This
 	 * creates overhead and skips further hooks by other modules. Instead, just hook (don't replace)
-	 * the method and call {@code param.setResult(null)} in {@link XC_MethodHook#beforeHookedMethod}
+	 * the method and call {@code param.setResult(null)} in {@link MIK_MethodHk#beforeHookedMethod}
 	 * if the original method should be skipped.
 	 *
 	 * @param method The method to be called.
@@ -361,11 +361,11 @@ public final class XposedBridge {
 	}
 
 	public static class AdditionalHookInfo {
-		public final CopyOnWriteSortedSet<XC_MethodHook> callbacks;
+		public final CopyOnWriteSortedSet<MIK_MethodHk> callbacks;
 		public final Class<?>[] parameterTypes;
 		public final Class<?> returnType;
 
-		private AdditionalHookInfo(CopyOnWriteSortedSet<XC_MethodHook> callbacks, Class<?>[] parameterTypes, Class<?> returnType) {
+		private AdditionalHookInfo(CopyOnWriteSortedSet<MIK_MethodHk> callbacks, Class<?>[] parameterTypes, Class<?> returnType) {
 			this.callbacks = callbacks;
 			this.parameterTypes = parameterTypes;
 			this.returnType = returnType;

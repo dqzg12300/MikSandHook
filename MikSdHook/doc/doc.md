@@ -118,7 +118,7 @@ XposedCompat.context = this;
 XposedCompat.classLoader = getClassLoader();
 XposedCompat.isFirstApplication= true;
 //do hook
-XposedHelpers.findAndHookMethod(Activity.class, "onResume", new XC_MethodHook() {
+MikXpHelpers.findHkMethod(Activity.class, "onResume", new MIK_MethodHk() {
       @Override
       protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
           super.beforeHookedMethod(param);

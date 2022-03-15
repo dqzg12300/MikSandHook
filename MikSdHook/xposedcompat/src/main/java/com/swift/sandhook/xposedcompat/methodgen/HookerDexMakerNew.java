@@ -25,7 +25,7 @@ import java.util.Map;
 
 import dalvik.system.InMemoryDexClassLoader;
 import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
+import de.robv.android.xposed.MikXpHelpers;
 
 import static com.swift.sandhook.xposedcompat.utils.DexMakerUtils.MD5;
 import static com.swift.sandhook.xposedcompat.utils.DexMakerUtils.autoBoxIfNecessary;
@@ -207,9 +207,9 @@ public class HookerDexMakerNew implements HookMaker {
     }
 
     private void setup(Class mHookClass) {
-        XposedHelpers.setStaticObjectField(mHookClass, FIELD_NAME_METHOD, mMember);
-        XposedHelpers.setStaticObjectField(mHookClass, FIELD_NAME_BACKUP_METHOD, mBackupMethod);
-        XposedHelpers.setStaticObjectField(mHookClass, FIELD_NAME_HOOK_INFO, mHookInfo);
+        MikXpHelpers.setStaticObjectField(mHookClass, FIELD_NAME_METHOD, mMember);
+        MikXpHelpers.setStaticObjectField(mHookClass, FIELD_NAME_BACKUP_METHOD, mBackupMethod);
+        MikXpHelpers.setStaticObjectField(mHookClass, FIELD_NAME_HOOK_INFO, mHookInfo);
     }
 
     private String getClassName(Member originMethod) {

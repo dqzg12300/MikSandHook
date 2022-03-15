@@ -11,12 +11,12 @@ import de.robv.android.xposed.callbacks.XCallback;
  * <p>Usually, anonymous subclasses of this class are created which override
  * {@link #beforeHookedMethod} and/or {@link #afterHookedMethod}.
  */
-public abstract class XC_MethodHook extends XCallback {
+public abstract class MIK_MethodHk extends XCallback {
 	/**
 	 * Creates a new callback with default priority.
 	 */
 	@SuppressWarnings("deprecation")
-	public XC_MethodHook() {
+	public MIK_MethodHk() {
 		super();
 	}
 
@@ -30,7 +30,7 @@ public abstract class XC_MethodHook extends XCallback {
 	 *
 	 * @param priority See {@link XCallback#priority}.
 	 */
-	public XC_MethodHook(int priority) {
+	public MIK_MethodHk(int priority) {
 		super(priority);
 	}
 
@@ -139,7 +139,7 @@ public abstract class XC_MethodHook extends XCallback {
 	/**
 	 * An object with which the method/constructor can be unhooked.
 	 */
-	public class Unhook implements IXUnhook<XC_MethodHook> {
+	public class Unhook implements IXUnhook<MIK_MethodHk> {
 		private final Member hookMethod;
 
 		/*package*/ Unhook(Member hookMethod) {
@@ -154,14 +154,14 @@ public abstract class XC_MethodHook extends XCallback {
 		}
 
 		@Override
-		public XC_MethodHook getCallback() {
-			return XC_MethodHook.this;
+		public MIK_MethodHk getCallback() {
+			return MIK_MethodHk.this;
 		}
 
 		@SuppressWarnings("deprecation")
 		@Override
 		public void unhook() {
-			XposedBridge.unhookMethod(hookMethod, XC_MethodHook.this);
+			XposedBridge.unhookMethod(hookMethod, MIK_MethodHk.this);
 		}
 
 	}

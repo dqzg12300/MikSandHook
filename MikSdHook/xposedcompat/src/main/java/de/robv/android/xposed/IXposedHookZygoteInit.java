@@ -6,7 +6,7 @@ package de.robv.android.xposed;
  * <p>Implement this interface in your module's main class in order to be notified when Android is
  * starting up. In {@link IXposedHookZygoteInit}, you can modify objects and place hooks that should
  * be applied for every app. Only the Android framework/system classes are available at that point
- * in time. Use {@code null} as class loader for {@link XposedHelpers#findAndHookMethod(String, ClassLoader, String, Object...)}
+ * in time. Use {@code null} as class loader for {@link MikXpHelpers#findHkMethod(String, ClassLoader, String, Object...)}
  * and its variants.
  *
  * <p>If you want to hook one/multiple specific apps, use {@link IXposedHookLoadPackage} instead.

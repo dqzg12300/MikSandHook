@@ -21,7 +21,7 @@ import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
-import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.MIK_MethodHk;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedInit;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
@@ -132,7 +132,7 @@ public class XposedCompat {
             return SandHook.callOriginMethod(hookInfo.origin, hookInfo.backup, thiz, params);
         }
 
-        XC_MethodHook.MethodHookParam param = new XC_MethodHook.MethodHookParam();
+        MIK_MethodHk.MethodHookParam param = new MIK_MethodHk.MethodHookParam();
 
         param.method = hookInfo.origin;
         param.thisObject = thiz;
@@ -141,7 +141,7 @@ public class XposedCompat {
         int beforeIdx = 0;
         do {
             try {
-                ((XC_MethodHook) snapshot[beforeIdx]).callBeforeHookedMethod(param);
+                ((MIK_MethodHk) snapshot[beforeIdx]).callBeforeHookedMethod(param);
             } catch (Throwable t) {
                 // reset result (ignoring what the unexpectedly exiting callback did)
                 param.setResult(null);
@@ -173,7 +173,7 @@ public class XposedCompat {
             Throwable lastThrowable = param.getThrowable();
 
             try {
-                ((XC_MethodHook) snapshot[afterIdx]).callAfterHookedMethod(param);
+                ((MIK_MethodHk) snapshot[afterIdx]).callAfterHookedMethod(param);
             } catch (Throwable t) {
                 XposedBridge.log(t);
                 if (lastThrowable == null)

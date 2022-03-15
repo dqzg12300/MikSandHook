@@ -10,8 +10,8 @@ import android.widget.TextView;
 import com.swift.sandhook.SandHook;
 import com.swift.sandhook.SandHookConfig;
 
-import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XposedHelpers;
+import de.robv.android.xposed.MIK_MethodHk;
+import de.robv.android.xposed.MikXpHelpers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 //            SandHook.passApiCheck();
 //        }
 
-//        XposedHelpers.findAndHookMethod(MainActivity.class, "ceshi", new XC_MethodHook() {
+//        MikXpHelpers.findHkMethod(MainActivity.class, "ceshi", new MIK_MethodHk() {
 //            @Override
 //            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
 //                super.beforeHookedMethod(param);

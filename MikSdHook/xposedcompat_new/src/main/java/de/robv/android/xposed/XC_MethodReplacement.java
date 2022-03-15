@@ -3,9 +3,9 @@ package de.robv.android.xposed;
 import de.robv.android.xposed.callbacks.XCallback;
 
 /**
- * A special case of {@link XC_MethodHook} which completely replaces the original method.
+ * A special case of {@link MIK_MethodHk} which completely replaces the original method.
  */
-public abstract class XC_MethodReplacement extends XC_MethodHook {
+public abstract class XC_MethodReplacement extends MIK_MethodHk {
 	/**
 	 * Creates a new callback with default priority.
 	 */

@@ -17,9 +17,9 @@ import com.swift.sandhook.testHookers.ObjectHooker;
 import com.swift.sandhook.wrapper.HookErrorException;
 import com.swift.sandhook.xposedcompat.XposedCompat;
 
-import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.MIK_MethodHk;
 import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
+import de.robv.android.xposed.MikXpHelpers;
 
 public class MyApp extends Application {
 
@@ -65,7 +65,7 @@ public class MyApp extends Application {
         XposedCompat.classLoader = getClassLoader();
         XposedCompat.isFirstApplication= true;
 
-        XposedHelpers.findAndHookMethod(Activity.class, "onResume", new XC_MethodHook() {
+        MikXpHelpers.findHkMethod(Activity.class, "onResume", new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);
@@ -80,7 +80,7 @@ public class MyApp extends Application {
         });
 
 
-        XposedHelpers.findAndHookMethod(MainActivity.class, "testStub", TestClass.class, int.class, String.class, boolean.class, char.class, String.class, new XC_MethodHook() {
+        MikXpHelpers.findHkMethod(MainActivity.class, "testStub", TestClass.class, int.class, String.class, boolean.class, char.class, String.class, new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);
@@ -95,7 +95,7 @@ public class MyApp extends Application {
             }
         });
 
-        XposedHelpers.findAndHookMethod(PendingHookTest.class, "test", new XC_MethodHook() {
+        MikXpHelpers.findHkMethod(PendingHookTest.class, "test", new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);
@@ -108,7 +108,7 @@ public class MyApp extends Application {
             }
         });
 
-        XposedBridge.hookAllConstructors(Thread.class, new XC_MethodHook() {
+        XposedBridge.hookAllConstructors(Thread.class, new MIK_MethodHk() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);

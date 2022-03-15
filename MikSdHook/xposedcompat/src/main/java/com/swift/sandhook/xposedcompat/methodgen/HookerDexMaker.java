@@ -29,7 +29,7 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 
 import dalvik.system.InMemoryDexClassLoader;
-import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.MIK_MethodHk;
 import de.robv.android.xposed.XposedBridge;
 
 import static com.swift.sandhook.xposedcompat.utils.DexMakerUtils.MD5;
@@ -59,28 +59,28 @@ public class HookerDexMaker implements HookMaker {
     private static final TypeId<Throwable> throwableTypeId = TypeId.get(Throwable.class);
     private static final TypeId<Member> memberTypeId = TypeId.get(Member.class);
     private static final TypeId<Method> methodTypeId = TypeId.get(Method.class);
-    private static final TypeId<XC_MethodHook> callbackTypeId = TypeId.get(XC_MethodHook.class);
+    private static final TypeId<MIK_MethodHk> callbackTypeId = TypeId.get(MIK_MethodHk.class);
     private static final TypeId<XposedBridge.AdditionalHookInfo> hookInfoTypeId
             = TypeId.get(XposedBridge.AdditionalHookInfo.class);
     private static final TypeId<XposedBridge.CopyOnWriteSortedSet> callbacksTypeId
             = TypeId.get(XposedBridge.CopyOnWriteSortedSet.class);
-    private static final TypeId<XC_MethodHook.MethodHookParam> paramTypeId
-            = TypeId.get(XC_MethodHook.MethodHookParam.class);
-    private static final MethodId<XC_MethodHook.MethodHookParam, Void> setResultMethodId =
+    private static final TypeId<MIK_MethodHk.MethodHookParam> paramTypeId
+            = TypeId.get(MIK_MethodHk.MethodHookParam.class);
+    private static final MethodId<MIK_MethodHk.MethodHookParam, Void> setResultMethodId =
             paramTypeId.getMethod(TypeId.VOID, "setResult", TypeId.OBJECT);
-    private static final MethodId<XC_MethodHook.MethodHookParam, Void> setThrowableMethodId =
+    private static final MethodId<MIK_MethodHk.MethodHookParam, Void> setThrowableMethodId =
             paramTypeId.getMethod(TypeId.VOID, "setThrowable", throwableTypeId);
-    private static final MethodId<XC_MethodHook.MethodHookParam, Object> getResultMethodId =
+    private static final MethodId<MIK_MethodHk.MethodHookParam, Object> getResultMethodId =
             paramTypeId.getMethod(TypeId.OBJECT, "getResult");
-    private static final MethodId<XC_MethodHook.MethodHookParam, Throwable> getThrowableMethodId =
+    private static final MethodId<MIK_MethodHk.MethodHookParam, Throwable> getThrowableMethodId =
             paramTypeId.getMethod(throwableTypeId, "getThrowable");
-    private static final MethodId<XC_MethodHook.MethodHookParam, Boolean> hasThrowableMethodId =
+    private static final MethodId<MIK_MethodHk.MethodHookParam, Boolean> hasThrowableMethodId =
             paramTypeId.getMethod(TypeId.BOOLEAN, "hasThrowable");
-    private static final MethodId<XC_MethodHook, Void> callAfterCallbackMethodId =
+    private static final MethodId<MIK_MethodHk, Void> callAfterCallbackMethodId =
             callbackTypeId.getMethod(TypeId.VOID, CALLBACK_METHOD_NAME_AFTER, paramTypeId);
-    private static final MethodId<XC_MethodHook, Void> callBeforeCallbackMethodId =
+    private static final MethodId<MIK_MethodHk, Void> callBeforeCallbackMethodId =
             callbackTypeId.getMethod(TypeId.VOID, CALLBACK_METHOD_NAME_BEFORE, paramTypeId);
-    private static final FieldId<XC_MethodHook.MethodHookParam, Boolean> returnEarlyFieldId =
+    private static final FieldId<MIK_MethodHk.MethodHookParam, Boolean> returnEarlyFieldId =
             paramTypeId.getField(TypeId.BOOLEAN, "returnEarly");
     private static final TypeId<XposedBridge> xposedBridgeTypeId = TypeId.get(XposedBridge.class);
     private static final MethodId<XposedBridge, Void> logThrowableMethodId =
@@ -475,14 +475,14 @@ public class HookerDexMaker implements HookMaker {
         Local<Object[]> snapshot = code.newLocal(objArrayTypeId);
         Local<Integer> snapshotLen = code.newLocal(TypeId.INT);
         Local<Object> callbackObj = code.newLocal(TypeId.OBJECT);
-        Local<XC_MethodHook> callback = code.newLocal(callbackTypeId);
+        Local<MIK_MethodHk> callback = code.newLocal(callbackTypeId);
 
         Local<Object> resultObj = code.newLocal(TypeId.OBJECT); // as a temp Local
         Local<Integer> one = code.newLocal(TypeId.INT);
         Local<Object> nullObj = code.newLocal(TypeId.OBJECT);
         Local<Throwable> throwable = code.newLocal(throwableTypeId);
 
-        Local<XC_MethodHook.MethodHookParam> param = code.newLocal(paramTypeId);
+        Local<MIK_MethodHk.MethodHookParam> param = code.newLocal(paramTypeId);
         Local<Member> method = code.newLocal(memberTypeId);
         Local<Object> thisObject = code.newLocal(TypeId.OBJECT);
         Local<Object[]> args = code.newLocal(objArrayTypeId);
