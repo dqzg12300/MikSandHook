@@ -6,11 +6,11 @@
 
 目前我简单替换的关键词如下
 
-> MikXpHelpers		->		MikXpHelpers
+> XposedHelpers		->		MikXpHelpers
 >
 > XC_MethodHook	 ->		MIK_MethodHk
 >
-> findHkMethod	->	findHkMethod
+> findAndHookMethod	->	findHkMethod
 
 ### 使用步骤
 
