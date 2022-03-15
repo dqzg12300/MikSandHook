@@ -1,0 +1,54 @@
+ninja: Entering directory `/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/armeabi-v7a'
+[1/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/inst/inst_arm32.cpp.o
+[2/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/register/register_arm32.cpp.o
+[3/19] Building CXX object CMakeFiles/sandhook-native.dir/utils/platform.cpp.o
+[4/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/register/register_list_arm32.cpp.o
+[5/19] Building ASM object CMakeFiles/sandhook-native.dir/archs/arm/arm32/hook/breakpoint_shellcode.S.o
+[6/19] Building CXX object CMakeFiles/sandhook-native.dir/sandhook_native.cpp.o
+[7/19] Building CXX object CMakeFiles/sandhook-native.dir/assembler/assembler.cpp.o
+[8/19] Building CXX object CMakeFiles/sandhook-native.dir/elf/elf.cpp.o
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp:204:49: warning: format specifies type 'unsigned long *' but the argument has type 'Addr *' (aka 'unsigned int *') [-Wformat]
+        sscanf(buf, "%lx-%lx %s %lx %s %ld %s", &begin, &end, perm,
+                     ~~~                        ^~~~~~
+                     %zx
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp:204:57: warning: format specifies type 'unsigned long *' but the argument has type 'Addr *' (aka 'unsigned int *') [-Wformat]
+        sscanf(buf, "%lx-%lx %s %lx %s %ld %s", &begin, &end, perm,
+                         ~~~                            ^~~~
+                         %zx
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp:205:16: warning: format specifies type 'unsigned long *' but the argument has type 'Addr *' (aka 'unsigned int *') [-Wformat]
+               &foo, dev, &inode, mapname);
+               ^~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp:205:27: warning: format specifies type 'long *' but the argument has type 'Addr *' (aka 'unsigned int *') [-Wformat]
+               &foo, dev, &inode, mapname);
+                          ^~~~~~
+4 warnings generated.
+[9/19] Building CXX object CMakeFiles/sandhook-native.dir/decoder/decoder.cpp.o
+[10/19] Building CXX object CMakeFiles/sandhook-native.dir/buffer/code_buffer.cpp.o
+[11/19] Building CXX object CMakeFiles/sandhook-native.dir/relocate/code_relocate.cpp.o
+[12/19] Building CXX object CMakeFiles/sandhook-native.dir/hook/hook.cpp.o
+[13/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/decoder/decoder_arm32.cpp.o
+[14/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/assembler/assembler_arm32.cpp.o
+[15/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/inst/inst_t32.cpp.o
+[16/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/inst/inst_t16.cpp.o
+[17/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/hook/hook_arm32.cpp.o
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook/hook_arm32.cpp:30:58: warning: format specifies type 'int' but the argument has type 'void *' [-Wformat]
+        LOGE("hook %d error!, only support thumb2 now!", origin);
+                   ~~                                    ^~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils/log.h:13:63: note: expanded from macro 'LOGE'
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__)
+                                                              ^~~~~~~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook/hook_arm32.cpp:92:58: warning: format specifies type 'int' but the argument has type 'void *' [-Wformat]
+        LOGE("hook %d error!, only support thumb2 now!", origin);
+                   ~~                                    ^~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils/log.h:13:63: note: expanded from macro 'LOGE'
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__)
+                                                              ^~~~~~~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook/hook_arm32.cpp:155:58: warning: format specifies type 'int' but the argument has type 'void *' [-Wformat]
+        LOGE("hook %d error!, only support thumb2 now!", origin);
+                   ~~                                    ^~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils/log.h:13:63: note: expanded from macro 'LOGE'
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__)
+                                                              ^~~~~~~~~~~
+3 warnings generated.
+[18/19] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm32/relocate/code_relocate_arm32.cpp.o
+[19/19] Linking CXX shared library /Users/king/git_src/MikSandHook/MikSdHook/nativehook/build/intermediates/cmake/debug/obj/armeabi-v7a/libsandhook-native.so

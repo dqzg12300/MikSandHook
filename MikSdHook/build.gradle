@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.novoda:bintray-release:0.9.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
+
+ext {
+    userOrg = 'ganyao114'
+    groupId = 'com.swift.sandhook'
+    repoName = 'SandHook'
+    publishVersion = '4.2.0'
+    desc = 'android art hook'
+    website = 'https://github.com/ganyao114/SandHook'
+    licences = ['Apache-2.0']
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

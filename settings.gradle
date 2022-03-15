@@ -1,0 +1,6 @@
+include ':app'
+rootProject.name = "MikSandHook"
+
+include ':MikSdHook:app',':MikSdHook:hooklib',
+        ':MikSdHook:hookers',':MikSdHook:annotation',
+        ':MikSdHook:xposedcompat',':MikSdHook:nativehook'

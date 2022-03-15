@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="SandHook.app" target="1.8" />
+      <module name="SandHook.hookers" target="1.8" />
+      <module name="SandHook.hooklib" target="1.8" />
+      <module name="SandHook.nativehook" target="1.8" />
+      <module name="SandHook.xposedcompat" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

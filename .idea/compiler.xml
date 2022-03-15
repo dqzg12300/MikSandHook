@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="MikSandHook.app" target="1.8" />
+      <module name="MikSandHook.MikSdHook.app" target="1.8" />
+      <module name="MikSandHook.MikSdHook.hookers" target="1.8" />
+      <module name="MikSandHook.MikSdHook.hooklib" target="1.8" />
+      <module name="MikSandHook.MikSdHook.nativehook" target="1.8" />
+      <module name="MikSandHook.MikSdHook.xposedcompat" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

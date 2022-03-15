@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/king/AndroidStudioProjects/MikSandHook/MikSdHook/hooklib/src/main/cpp/CMakeLists.txt",
+    "/Users/king/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/king/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/king/AndroidStudioProjects/MikSandHook/MikSdHook/hooklib/.cxx/cmake/release/armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/king/AndroidStudioProjects/MikSandHook/MikSdHook/hooklib/.cxx/cmake/release/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "sandhook-Release-armeabi-v7a": {
+      "artifactName": "sandhook",
+      "buildCommand": "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/king/AndroidStudioProjects/MikSandHook/MikSdHook/hooklib/.cxx/cmake/release/armeabi-v7a\" sandhook",
+      "abi": "armeabi-v7a",
+      "output": "/Users/king/AndroidStudioProjects/MikSandHook/MikSdHook/hooklib/build/intermediates/cmake/release/obj/armeabi-v7a/libsandhook.so",
+      "runtimeFiles": []
+    }
+  }
+}

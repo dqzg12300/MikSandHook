@@ -1,0 +1,103 @@
+[
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/sandhook.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/sandhook.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/sandhook.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/trampoline/trampoline.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/trampoline.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/trampoline.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/trampoline/trampoline_manager.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/trampoline_manager.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/trampoline_manager.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/utils/dlfcn_nougat.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/dlfcn_nougat.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/dlfcn_nougat.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/utils/hide_api.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/hide_api.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/hide_api.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/utils/utils.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/utils.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/utils.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/utils/offset.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/offset.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/offset.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/utils/elf_util.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/elf_util.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/utils/elf_util.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/casts/cast_art_method.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_art_method.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_art_method.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/casts/cast_compiler_options.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_compiler_options.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_compiler_options.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/art/art_method.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_method.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_method.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/art/art_compiler_options.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_compiler_options.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_compiler_options.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang -target aarch64-none-linux-android21 -gcc-toolchain /Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/trampoline/arch/arm32.S.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/arch/arm32.S",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/arch/arm32.S"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang -target aarch64-none-linux-android21 -gcc-toolchain /Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/trampoline/arch/arm64.S.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/arch/arm64.S",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/trampoline/arch/arm64.S"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/inst/insts_arm32.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/inst/insts_arm32.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/inst/insts_arm32.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/inst/insts_arm64.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/inst/insts_arm64.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/inst/insts_arm64.cpp"
+},
+
+{
+  "directory": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dsandhook_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -std=c++11 -o CMakeFiles/sandhook.dir/nativehook/native_hook.cpp.o -c /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/nativehook/native_hook.cpp",
+  "file": "/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/nativehook/native_hook.cpp"
+}
+]

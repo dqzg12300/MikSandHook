@@ -1,0 +1,7 @@
+Executable : /Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/armeabi-v7a
+sandhook-native
+jvmArgs : 
+

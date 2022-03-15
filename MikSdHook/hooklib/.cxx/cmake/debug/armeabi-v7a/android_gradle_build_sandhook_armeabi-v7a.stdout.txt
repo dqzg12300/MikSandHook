@@ -1,0 +1,84 @@
+ninja: Entering directory `/Users/king/git_src/MikSandHook/MikSdHook/hooklib/.cxx/cmake/debug/armeabi-v7a'
+[1/18] Building CXX object CMakeFiles/sandhook.dir/utils/offset.cpp.o
+[2/18] Building CXX object CMakeFiles/sandhook.dir/trampoline/trampoline.cpp.o
+[3/18] Building CXX object CMakeFiles/sandhook.dir/utils/utils.cpp.o
+[4/18] Building ASM object CMakeFiles/sandhook.dir/trampoline/arch/arm32.S.o
+[5/18] Building CXX object CMakeFiles/sandhook.dir/utils/elf_util.cpp.o
+[6/18] Building CXX object CMakeFiles/sandhook.dir/art/art_compiler_options.cpp.o
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_compiler_options.cpp:6:
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/../includes/cast_compiler_options.h:8:
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/../includes/cast.h:54:24: warning: implicit conversion of NULL constant to 'unsigned int' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       0
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_compiler_options.cpp:17:53: note: in instantiation of member function 'SandHook::IMember<art::CompilerOptions, unsigned int>::get' requested here
+    return CastCompilerOptions::inlineMaxCodeUnits->get(this);
+                                                    ^
+1 warning generated.
+[7/18] Building ASM object CMakeFiles/sandhook.dir/trampoline/arch/arm64.S.o
+[8/18] Building CXX object CMakeFiles/sandhook.dir/casts/cast_compiler_options.cpp.o
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_compiler_options.cpp:5:
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/../includes/cast_compiler_options.h:8:
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/../includes/cast.h:54:24: warning: implicit conversion of NULL constant to 'unsigned int' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       0
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_compiler_options.cpp:33:90: note: in instantiation of member function 'SandHook::IMember<art::CompilerOptions, unsigned int>::get' requested here
+    IMember<art::CompilerOptions, size_t>* CastCompilerOptions::inlineMaxCodeUnits = new CastInlineMaxCodeUnits();
+                                                                                         ^
+1 warning generated.
+[9/18] Building CXX object CMakeFiles/sandhook.dir/inst/insts_arm64.cpp.o
+[10/18] Building CXX object CMakeFiles/sandhook.dir/utils/dlfcn_nougat.cpp.o
+[11/18] Building CXX object CMakeFiles/sandhook.dir/inst/insts_arm32.cpp.o
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/inst/insts_arm32.cpp:124:21: warning: delete called on 'SandHook::Inst' that is abstract but has non-virtual destructor [-Wdelete-abstract-non-virtual-dtor]
+                    delete inst;
+                    ^
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/inst/insts_arm32.cpp:128:17: warning: delete called on 'SandHook::Inst' that is abstract but has non-virtual destructor [-Wdelete-abstract-non-virtual-dtor]
+                delete inst;
+                ^
+2 warnings generated.
+[12/18] Building CXX object CMakeFiles/sandhook.dir/nativehook/native_hook.cpp.o
+[13/18] Building CXX object CMakeFiles/sandhook.dir/art/art_method.cpp.o
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_method.cpp:6:
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/../includes/cast_art_method.h:8:
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/../includes/cast.h:54:24: warning: implicit conversion of NULL constant to 'unsigned int' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       0
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_method.cpp:109:39: note: in instantiation of member function 'SandHook::IMember<art::mirror::ArtMethod, unsigned int>::get' requested here
+    return CastArtMethod::accessFlag->get(this);
+                                      ^
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_method.cpp:6:
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/../includes/cast_art_method.h:8:
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/../includes/cast.h:54:24: warning: implicit conversion of NULL constant to 'unsigned short' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       0
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/art/art_method.cpp:129:41: note: in instantiation of member function 'SandHook::IMember<art::mirror::ArtMethod, unsigned short>::get' requested here
+    return CastArtMethod::hotnessCount->get(this);
+                                        ^
+2 warnings generated.
+[14/18] Building CXX object CMakeFiles/sandhook.dir/sandhook.cpp.o
+[15/18] Building CXX object CMakeFiles/sandhook.dir/casts/cast_art_method.cpp.o
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_art_method.cpp:5:
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/../includes/cast_art_method.h:8:
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/../includes/cast.h:54:24: warning: implicit conversion of NULL constant to 'unsigned int' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       0
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_art_method.cpp:200:26: note: in instantiation of member function 'SandHook::IMember<art::mirror::ArtMethod, unsigned int>::get' requested here
+        accessFlag = new CastAccessFlag();
+                         ^
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_art_method.cpp:5:
+In file included from /Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/../includes/cast_art_method.h:8:
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/../includes/cast.h:54:24: warning: implicit conversion of NULL constant to 'unsigned short' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       0
+/Users/king/git_src/MikSandHook/MikSdHook/hooklib/src/main/cpp/casts/cast_art_method.cpp:219:28: note: in instantiation of member function 'SandHook::IMember<art::mirror::ArtMethod, unsigned short>::get' requested here
+        hotnessCount = new CastHotnessCount();
+                           ^
+2 warnings generated.
+[16/18] Building CXX object CMakeFiles/sandhook.dir/utils/hide_api.cpp.o
+[17/18] Building CXX object CMakeFiles/sandhook.dir/trampoline/trampoline_manager.cpp.o
+[18/18] Linking CXX shared library /Users/king/git_src/MikSandHook/MikSdHook/hooklib/build/intermediates/cmake/debug/obj/armeabi-v7a/libsandhook.so

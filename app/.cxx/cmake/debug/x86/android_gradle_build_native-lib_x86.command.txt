@@ -1,0 +1,7 @@
+Executable : /Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/king/git_src/MikSandHook/app/.cxx/cmake/debug/x86
+native-lib
+jvmArgs : 
+

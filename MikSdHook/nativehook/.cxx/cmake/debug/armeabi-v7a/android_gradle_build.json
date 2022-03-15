@@ -1,0 +1,129 @@
+{
+  "stringTable": {
+    "0": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi16 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsandhook_native_EXPORTS -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/asm -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/decoder -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/includes -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/buffer -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/inst -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/register -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/decoder -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/assembler -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/relocate -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/hook -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/inst -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/register -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/assembler -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/decoder -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/relocate -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/src/main/cpp/antihook -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -frtti -fexceptions -Wpointer-arith -O0 -fno-limit-debug-info -fPIC -std=c++11",
+    "2": "-target armv7-none-linux-androideabi16 -gcc-toolchain /Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsandhook_native_EXPORTS -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/asm -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/decoder -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/includes -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/buffer -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/inst -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/register -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/decoder -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/assembler -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/relocate -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/hook -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/inst -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/register -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/assembler -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/decoder -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/relocate -I/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/src/main/cpp/antihook -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -std=c++11"
+  },
+  "buildFiles": [
+    "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/CMakeLists.txt",
+    "/Users/king/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/king/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "sandhook-native-Debug-armeabi-v7a": {
+      "buildCommand": "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/armeabi-v7a\" sandhook-native",
+      "buildType": "debug",
+      "toolchain": "4240742586",
+      "abi": "armeabi-v7a",
+      "artifactName": "sandhook-native",
+      "files": [
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook/breakpoint_shellcode.S",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/sandhook_native.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/decoder/decoder.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/relocate/code_relocate.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/assembler/assembler.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/buffer/code_buffer.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils/platform.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/hook/hook.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/inst/inst_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/inst/inst_t32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/inst/inst_t16.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/register/register_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/register/register_list_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/assembler/assembler_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/decoder/decoder_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/hook/hook_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm32/relocate/code_relocate_arm32.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/king/git_src/MikSandHook/MikSdHook/nativehook/build/intermediates/cmake/debug/obj/armeabi-v7a/libsandhook-native.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "4240742586": {
+      "cppCompilerExecutable": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

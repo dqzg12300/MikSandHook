@@ -1,0 +1,43 @@
+{
+  "stringTable": {
+    "0": "/Users/king/AndroidStudioProjects/MikSandHook/app/.cxx/cmake/release/x86_64",
+    "1": "--target=x86_64-none-linux-android28 --gcc-toolchain=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O2 -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "/Users/king/AndroidStudioProjects/MikSandHook/app/src/main/cpp/CMakeLists.txt",
+    "/Users/king/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/king/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/king/AndroidStudioProjects/MikSandHook/app/.cxx/cmake/release/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/king/AndroidStudioProjects/MikSandHook/app/.cxx/cmake/release/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Release-x86_64": {
+      "buildCommand": "/Users/king/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/king/AndroidStudioProjects/MikSandHook/app/.cxx/cmake/release/x86_64\" native-lib",
+      "buildType": "release",
+      "toolchain": "4240742586",
+      "abi": "x86_64",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/Users/king/AndroidStudioProjects/MikSandHook/app/src/main/cpp/native-lib.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/king/AndroidStudioProjects/MikSandHook/app/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "4240742586": {
+      "cppCompilerExecutable": "/Users/king/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

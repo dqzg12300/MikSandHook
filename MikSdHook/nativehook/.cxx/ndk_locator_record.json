@@ -1,0 +1,41 @@
+{
+  "ndkFolder": "/Users/king/Library/Android/sdk/ndk/21.3.6528147",
+  "messages": [
+    {
+      "level": "INFO",
+      "message": "android.ndkVersion from module build.gradle is not set"
+    },
+    {
+      "level": "INFO",
+      "message": "ndk.dir in local.properties is not set"
+    },
+    {
+      "level": "INFO",
+      "message": "ANDROID_NDK_HOME environment variable is not set"
+    },
+    {
+      "level": "INFO",
+      "message": "sdkFolder is /Users/king/Library/Android/sdk"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /Users/king/Library/Android/sdk/ndk-bundle in SDK ndk-bundle folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /Users/king/Library/Android/sdk/ndk/21.3.6528147 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /Users/king/Library/Android/sdk/ndk/21.0.6113669 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /Users/king/Library/Android/sdk/ndk/21.1.6352462 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "No user requested version, choosing /Users/king/Library/Android/sdk/ndk/21.3.6528147 which is version 21.3.6528147"
+    }
+  ]
+}

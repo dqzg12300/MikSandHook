@@ -1,0 +1,39 @@
+ninja: Entering directory `/Users/king/git_src/MikSandHook/MikSdHook/nativehook/.cxx/cmake/debug/arm64-v8a'
+[1/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/register/register_arm64.cpp.o
+[2/16] Building CXX object CMakeFiles/sandhook-native.dir/utils/platform.cpp.o
+[3/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/register/register_list_arm64.cpp.o
+[4/16] Building CXX object CMakeFiles/sandhook-native.dir/decoder/decoder.cpp.o
+[5/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/assembler/assembler_arm64.cpp.o
+[6/16] Building CXX object CMakeFiles/sandhook-native.dir/assembler/assembler.cpp.o
+[7/16] Building CXX object CMakeFiles/sandhook-native.dir/elf/elf.cpp.o
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp:119:44: warning: format specifies type 'unsigned int' but the argument has type 'Elf_Addr' (aka 'unsigned long long') [-Wformat]
+                LOGD("find %s: %x\n", elf, _offset);
+                               ~~          ^~~~~~~
+                               %llx
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils/log.h:11:63: note: expanded from macro 'LOGD'
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
+                                                              ^~~~~~~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/elf/elf.cpp:133:48: warning: format specifies type 'unsigned int' but the argument has type 'Elf_Addr' (aka 'unsigned long long') [-Wformat]
+                    LOGD("find %s: %x\n", elf, _offset);
+                                   ~~          ^~~~~~~
+                                   %llx
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/utils/log.h:11:63: note: expanded from macro 'LOGD'
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
+                                                              ^~~~~~~~~~~
+2 warnings generated.
+[8/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/decoder/decoder_arm64.cpp.o
+[9/16] Building CXX object CMakeFiles/sandhook-native.dir/buffer/code_buffer.cpp.o
+[10/16] Building CXX object CMakeFiles/sandhook-native.dir/hook/hook.cpp.o
+[11/16] Building CXX object CMakeFiles/sandhook-native.dir/relocate/code_relocate.cpp.o
+[12/16] Building CXX object CMakeFiles/sandhook-native.dir/sandhook_native.cpp.o
+[13/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/inst/inst_arm64.cpp.o
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/archs/arm/arm64/inst/inst_arm64.cpp:249:39: warning: shift count >= width of type [-Wshift-count-overflow]
+    Get()->b40 = static_cast<InstA64>(BITS(bit, sizeof(InstA64) - 5, sizeof(InstA64)));
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/king/git_src/MikSandHook/MikSdHook/nativehook/src/main/cpp/includes/base.h:235:35: note: expanded from macro 'BITS'
+#define BITS(obj, st, fn) (((obj) >> (st)) & SUB_MASK((fn) - (st)))
+                                  ^  ~~~~
+1 warning generated.
+[14/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/relocate/code_relocate_arm64.cpp.o
+[15/16] Building CXX object CMakeFiles/sandhook-native.dir/archs/arm/arm64/hook/hook_arm64.cpp.o
+[16/16] Linking CXX shared library /Users/king/git_src/MikSandHook/MikSdHook/nativehook/build/intermediates/cmake/debug/obj/arm64-v8a/libsandhook-native.so
