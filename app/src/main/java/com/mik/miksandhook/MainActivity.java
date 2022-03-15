@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.swift.sandhook.SandHook;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 //    static {
 //        System.loadLibrary("native-lib");
 //    }
-
+    Button btn;
     public static int getPreviewSDKInt() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             try {
@@ -36,34 +38,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        // Example of a call to a native method
-//        TextView tv = findViewById(R.id.sample_text);
-//        tv.setText(stringFromJNI());
-//
-//        SandHookConfig.DEBUG = BuildConfig.DEBUG;
-//
-//        if (Build.VERSION.SDK_INT == 29 && getPreviewSDKInt() > 0) {
-//            // Android R preview
-//            SandHookConfig.SDK_INT = 30;
-//        }
-//
-//        SandHook.disableVMInline();
-//        SandHook.tryDisableProfile(getPackageName());
-//        SandHook.disableDex2oatInline(false);
-//
-//        if (SandHookConfig.SDK_INT >= Build.VERSION_CODES.P) {
-//            SandHook.passApiCheck();
-//        }
-
-//        MikXpHelpers.findHkMethod(MainActivity.class, "ceshi", new MIK_MethodHk() {
-//            @Override
-//            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-//                super.beforeHookedMethod(param);
-//                Log.i("ceshi","xposed hook success");
-//            }
-//        });
-//
-//        ceshi();
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ceshi();
+            }
+        });
 
     }
 
